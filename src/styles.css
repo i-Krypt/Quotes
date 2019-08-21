@@ -1,5 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 body{
+    position: relative;
+
     background: url('https://i.ibb.co/NSf0RRz/marvel.jpg') center;
 
     background-position: cover;
