@@ -28,7 +28,7 @@ f).The user can up vote or down vote a quote.
 
 2.If you have git Use this command git clone * to clone the project.
 
-3.Run ng serve from your terminal
+3.Run ng serve from your terminal.
 
 Live Demo
 To view the page click on the link below
