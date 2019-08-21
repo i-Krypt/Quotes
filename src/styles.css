@@ -2,6 +2,9 @@
 body{
     position: relative;
     background: rgba(0,0,0,0);
+    opacity: 1;
+    z-index: 2;
+    
 
     background: url('https://i.ibb.co/NSf0RRz/marvel.jpg') center;
 
