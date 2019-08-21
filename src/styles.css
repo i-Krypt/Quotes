@@ -12,4 +12,7 @@ body{
 
  }
 
- 
+ .overlay{
+     z-index: 2;
+     background-color: rgba(37,42,48, 0.6);
+ }
