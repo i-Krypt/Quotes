@@ -1,0 +1,41 @@
+<div class="ui top attached tabular menu">
+    <div class="item" style="color: rgb(56, 103, 212)">Add a new Quote</div>
+  </div>
+  <div class="ui bottom attached tab segment">
+   
+  </div>
+
+<div class="ui inverted segment">
+  <div class="ui inverted form"> 
+     <div class="One"> 
+      <div class="field">
+        <form (ngSubmit)='submitQuote(); quoteForm.reset()' #quoteForm='ngForm'>
+          <label>Author</label>
+          <input placeholder="Mcu Character" type="text" class="form-control" id="author" [(ngModel)]="newQuote.author"
+             name="author" #author='ngModel' required> 
+          <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
+            <p>Author is required</p>
+          </div>
+          <div class="inline-field">
+            <label for="description">Quote</label>
+            <textarea class="form-control" id="marvel" rows="4" [(ngModel)]="newQuote.marvel" name="marvel"
+              #marvel="ngModel" required></textarea>
+            <div [hidden]="marvel.valid || marvel.pristine" class="alert alert-danger">
+              <p>Quote is required</p>
+
+            </div>
+            <div class="field">
+              <label>Submitted by</label>
+              <input placeholder="name" type="text" required class="form-control" id="submitter"
+                 [(ngModel)]="newQuote.submitter" name="submitter" #submitter='ngModel'>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="complete">Created on</label>
+            <input type='date' id="complete"
+            [(ngModel)]="newQuote.completeDate" name="completeDate" #completeDate='ngModel'required>
+          </div>
+         <button class="ui primary button">Add Quote</button>
+        </form>
+      </div>
+    </div> 

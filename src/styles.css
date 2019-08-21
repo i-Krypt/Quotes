@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    background: url('https://i.ibb.co/NSf0RRz/marvel.jpg') center;
+
+    background-position: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    
+
+ }
