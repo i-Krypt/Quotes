@@ -1,55 +1,55 @@
-
-<div class="container">
-        <div class="overlay"></div>
+<div class="overlay">
+        <div class="container">
                 <div class="ui inverted segment">
-                                <div class="ui inverted secondary menu">
-                                  <!-- <a class="item">
+                        <div class="ui inverted secondary menu">
+                                <!-- <a class="item">
                                     Home
                                   </a> -->
-                                 <h1 class="mav">Marvel Quotes.</h1>
-                                </div>
-                              </div>
+                                <h1 class="mav">Marvel Quotes.</h1>
+                        </div>
+                </div>
 
-        <br>
+                <br>
 
-        <div class="row">
-                <div class="col-md-6">
-                        <div class="ui cards" *ngFor='let quote of quotes;let i = index'>
-                                <div class="card">
-                                        <div class="content">
-                                                <div class="right floated">{{quote.completeDate|date}}</div>
-                                                <h5 class="header">{{quote.author}}: </h5>
-                                                <div class="description" appHighlight>{{quote.marvel}}</div>
+                <div class="row">
+                        <div class="col-md-6">
+                                <div class="ui cards" *ngFor='let quote of quotes;let i = index'>
+                                        <div class="card">
+                                                <div class="content">
+                                                        <div class="right floated">{{quote.completeDate|date}}</div>
+                                                        <h5 class="header">{{quote.author}}: </h5>
+                                                        <div class="description" appHighlight>{{quote.marvel}}</div>
 
-                                                <!-- upvote fabs -->
-                                                <div float-right>
-                                                        <!-- <span (click)="upvote()"><i class="thumbs up icon" ></i></span>
+                                                        <!-- upvote fabs -->
+                                                        <div float-right>
+                                                                <!-- <span (click)="upvote()"><i class="thumbs up icon" ></i></span>
                                                                 {{upvotes}} -->
-                                                        <a (click)="quote.upvotes=quote.upvotes+1"> <i
-                                                                        class="thumbs up icon"></i></a>
-                                                        {{quote.upvotes}}
-                                                        <a (click)="quote.downvotes=quote.downvotes+1"> <i
-                                                                        class="thumbs down icon"></i></a>
-                                                        {{quote.downvotes}}
-                                                        <!-- <span><i class="thumbs down icon" (click)="downvote()"></i></span>
+                                                                <a (click)="quote.upvotes=quote.upvotes+1"> <i
+                                                                                class="thumbs up icon"></i></a>
+                                                                {{quote.upvotes}}
+                                                                <a (click)="quote.downvotes=quote.downvotes+1"> <i
+                                                                                class="thumbs down icon"></i></a>
+                                                                {{quote.downvotes}}
+                                                                <!-- <span><i class="thumbs down icon" (click)="downvote()"></i></span>
                                                                 {{ downvotes }} -->
+                                                        </div>
+
+
+                                                        <h6>
+                                                                <app-marvel-quotes [quote]='quote'
+                                                                        (isComplete)='deleteQuote($event,i)'>
+                                                                </app-marvel-quotes>
+                                                        </h6>
                                                 </div>
-
-
-                                                <h6>
-                                                        <app-marvel-quotes [quote]='quote'
-                                                                (isComplete)='deleteQuote($event,i)'>
-                                                        </app-marvel-quotes>
-                                                </h6>
                                         </div>
                                 </div>
+
+                        </div> <!-- quotes form -->
+                        <div class="col-md-6">
+                                <app-quote-form (addQuote)='addNewQuote($event)'></app-quote-form>
                         </div>
 
-                </div> <!-- quotes form -->
-                <div class="col-md-6">
-                        <app-quote-form (addQuote)='addNewQuote($event)'></app-quote-form>
                 </div>
 
         </div>
-
 </div>
