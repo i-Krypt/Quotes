@@ -11,3 +11,9 @@ body{
     
 
  }
+
+ .marvel{
+    position: relative;
+    width: 20em; min-height: 10em;
+    transition: background-color 1s;
+ }
